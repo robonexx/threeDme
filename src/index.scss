@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  background-color: #121212;
+  
+}
+
+section {
+  position: relative;
+}
+
+#leva__root {
+  position: absolute !important;
+  top: 100vh !important;
+}
+
+canvas {
+  position: relative;
+  height: 80%;
+  width: 80%;
+}
+
+canvas:nth-child(2) {
+  background: linear-gradient(-45deg, #2d3030, #1c1c1d, #131f1f, #06061d);
+ /*  background-size: 200% 200%; */
+  animation: gradient 15s ease infinite;
+}
+
+.animation {
+  position: relative;
+  top: 0vw;
+  left: 0vw;
+  width: 30vw;
+  height: 60vh;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+/* @keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */

@@ -1,0 +1,95 @@
+.tech {
+  position: fixed;
+  left: 5vw;
+  top: 10vh;
+  width: 600px;
+  height: 400px;
+  opacity: 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  z-index: 1000;
+  object-fit: cover;
+  visibility: hidden;
+}
+
+.tech.play {
+  visibility: visible;
+  opacity: 1;
+  -webkit-animation: tech 20s 1 step-end;
+  animation: tech 20s 1 step-end;
+}
+
+/* Maybe Ill also  move these keyframes to the keyframes css file */
+
+@keyframes tech {
+  5% {
+    visibility: visible;
+    background-image: url('/images/welcome.png');
+  }
+  10% {
+    opacity: 0.7;
+
+    left: 2%;
+    bottom: 2%;
+  }
+  15.5% {
+    opacity: 0.5;
+  }
+  20% {
+    opacity: 0.5;
+    left: 5%;
+    top: 2%;
+  }
+  22% {
+    opacity: 0.5;
+    filter: none;
+    left: 50%;
+    top: 10%;
+  }
+  24% {
+    opacity: 1;
+  }
+  25.5% {
+    opacity: 0.5;
+  }
+  35% {
+    opacity: 1;
+    background-image: url('/images/next-js.png');
+  }
+  40% {
+    opacity: 0.8;
+    top: 30%;
+    left: 10%;
+    background-size: 60%;
+    background-image: url('/images/wagmi.png');
+   
+  }
+  50% {
+   
+    filter: none;
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+    top: 5vh;
+    left: 10vw;
+    background-image: url('/images/coder.png');
+  
+  }
+  80% {
+    left: 0;
+    bottom: 0;
+    background-size: 75%;
+    object-fit: cover;
+    background-image: url('/images/mentor.jpg');
+  }
+  90% {
+    opacity: 0.7;
+    left: 30%;
+   
+  }
+  100% {
+    visibility: visible;
+    background-image: none;
+  }
+}
