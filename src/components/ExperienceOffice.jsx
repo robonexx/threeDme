@@ -74,7 +74,7 @@ import {
           position-x={-1.3}
           position-y={-0.4}
           position-z={1}
-          lineHeight={0.8}
+          lineHeight={1}
           textAlign="center"
           rotation-y={degToRad(30)}
           anchorY={"bottom"}
@@ -89,14 +89,14 @@ import {
             <RenderTexture attach={"map"}>
               <color attach="background" args={["#fff"]} />
               <Environment preset="sunset" />
-              <Float floatIntensity={4} rotationIntensity={5}>
+              {/* <Float floatIntensity={4} rotationIntensity={5}>
                 <Office
                   scale={1.2}
                   rotation-y={-degToRad(25)}
                   rotation-x={degToRad(40)}
                   position-y={-0.5}
                 />
-              </Float>
+              </Float> */}
             </RenderTexture>
           </meshBasicMaterial>
         </Text>

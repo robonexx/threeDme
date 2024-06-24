@@ -6,12 +6,12 @@ import * as THREE from 'three';
 
 export const IntroAvatar = forwardRef((props, ref) => {
   const { animation } = props;
-  const { headFollow, cursorFollow, wireframe } = useControls({
-    headFollow: false,
-    cursorFollow: true,
+/*   const { headFollow, cursorFollow, wireframe } = useControls({
+    headFollow: true,
+    cursorFollow: false,
     wireframe: false,
   });
-
+ */
   const localRef = useRef();
   const group = ref || localRef;
 
@@ -34,7 +34,7 @@ export const IntroAvatar = forwardRef((props, ref) => {
     group
     );
     
-    useFrame((state) => {
+  /*   useFrame((state) => {
         if (headFollow) {
           group.current.getObjectByName('Head').lookAt(state.camera.position);
         }
@@ -42,7 +42,7 @@ export const IntroAvatar = forwardRef((props, ref) => {
           const target = new THREE.Vector3(state.mouse.x, state.mouse.y, 1);
           group.current.getObjectByName('Head').lookAt(target);
         }
-      });
+      }); */
 
   useEffect(() => {
     actions[animation].reset().fadeIn(0.5).play();
@@ -51,11 +51,11 @@ export const IntroAvatar = forwardRef((props, ref) => {
     };
   }, [animation, actions]);
 
-  useEffect(() => {
+/*   useEffect(() => {
     Object.values(materials).forEach((material) => {
       material.wireframe = wireframe;
     });
-  }, [wireframe, materials]);
+  }, [wireframe, materials]); */
 
   return (
     <group {...props} ref={group} dispose={null}>

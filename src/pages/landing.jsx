@@ -30,7 +30,8 @@ const Landing = () => {
       } else {
         audioRef.current.pause();
       }
-    };
+  };
+  
   const handleVisit = () => {
     localStorage.setItem('visitedBefore', 'true');
     window.location.href = '/';
