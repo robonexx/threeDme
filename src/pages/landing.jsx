@@ -32,10 +32,10 @@ const Landing = () => {
       }
   };
   
-  const handleVisit = () => {
+/*   const handleVisit = () => {
     localStorage.setItem('visitedBefore', 'true');
     window.location.href = '/';
-  };
+  }; */
 
   return (
     <div
@@ -62,7 +62,7 @@ const Landing = () => {
             setIsTyping={setIsTyping}
           />
                   </Canvas>
-                  <button style={{position: 'absolute', left: '5vw', top: '40vh'}} onClick={handleVisit}>Visit Home</button>
+                  <button style={{position: 'absolute', left: '5vw', top: '40vh'}} /* onClick={handleVisit} */>Visit Home</button>
       </section>
     
     </AnimationProvider>
